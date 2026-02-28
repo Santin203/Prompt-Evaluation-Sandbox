@@ -48,6 +48,16 @@ footer {visibility: hidden;}
 [data-testid="stAppViewContainer"][data-theme="dark"] .score-card {
     background-color: #1a1a2e;
 }
+
+/* Pointer cursor on dropdowns, buttons, and interactive widgets */
+[data-testid="stSelectbox"],
+[data-testid="stSelectbox"] * ,
+[data-testid="stMultiSelect"],
+[data-testid="stMultiSelect"] *,
+div[data-baseweb="select"],
+div[data-baseweb="select"] * {
+    cursor: pointer !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
