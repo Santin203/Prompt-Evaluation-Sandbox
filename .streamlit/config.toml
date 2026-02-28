@@ -1,0 +1,11 @@
+[client]
+toolbarMode = "minimal"
+
+[server]
+runOnSave = true
+
+[ui]
+hideTopBar = true
+
+[theme]
+base = "light"
