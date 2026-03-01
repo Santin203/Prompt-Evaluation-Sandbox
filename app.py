@@ -20,22 +20,12 @@ st.set_page_config(
 # Inject theme-aware CSS for cards
 st.markdown("""
 <style>
-/* Hide Streamlit chrome */
+/* Hide Streamlit chrome but keep sidebar toggle */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 [data-testid="stStatusWidget"] {display: none;}
-/* Hide header bar but keep sidebar toggle visible */
-header[data-testid="stHeader"] {
-    background: transparent !important;
-    backdrop-filter: none !important;
-}
-header[data-testid="stHeader"] > div:first-child {
-    visibility: hidden;
-}
-button[data-testid="stSidebarCollapseButton"],
-button[data-testid="stSidebarCollapsedControl"] {
-    visibility: visible !important;
-}
+[data-testid="stToolbar"] {display: none;}
+[data-testid="stDecoration"] {display: none;}
 
 .eval-card {
     padding: 15px;
