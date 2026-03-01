@@ -22,9 +22,20 @@ st.markdown("""
 <style>
 /* Hide Streamlit chrome */
 #MainMenu {visibility: hidden;}
-header {visibility: hidden;}
 footer {visibility: hidden;}
 [data-testid="stStatusWidget"] {display: none;}
+/* Hide header bar but keep sidebar toggle visible */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+header[data-testid="stHeader"] > div:first-child {
+    visibility: hidden;
+}
+button[data-testid="stSidebarCollapseButton"],
+button[data-testid="stSidebarCollapsedControl"] {
+    visibility: visible !important;
+}
 
 .eval-card {
     padding: 15px;
