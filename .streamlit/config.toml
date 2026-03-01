@@ -5,7 +5,7 @@ toolbarMode = "minimal"
 runOnSave = true
 
 [ui]
-hideTopBar = true
+hideTopBar = false
 
 [theme]
 base = "light"

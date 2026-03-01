@@ -21,10 +21,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* Hide Streamlit chrome but keep sidebar toggle */
-#MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-[data-testid="stStatusWidget"] {display: none;}
-[data-testid="stToolbar"] {display: none;}
 [data-testid="stDecoration"] {display: none;}
 
 .eval-card {
