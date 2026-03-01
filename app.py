@@ -115,7 +115,7 @@ with col_a:
         "System Prompt A",
         height=150,
         placeholder="You are a helpful assistant that answers concisely...",
-        value=st.session_state.get("prompt_a", "You are a helpful and concise assistant. Answer in 2-3 sentences maximum."),
+        value=st.session_state.get("prompt_a", "You are a helpful and empathetic customer support assistant for Dialogue Labs. Do your best to resolve the user's issue and make sure they leave happy."),
     )
 
 with col_b:
@@ -124,7 +124,15 @@ with col_b:
         "System Prompt B",
         height=150,
         placeholder="You are a detailed expert who provides thorough answers...",
-        value=st.session_state.get("prompt_b", "You are a thorough expert. Provide detailed, comprehensive answers with examples and explanations."),
+        value=st.session_state.get("prompt_b", """You are a customer support assistant for Dialogue Labs. You must strictly adhere to the following company policy: 'Refunds are only issued if requested within 14 days of the INITIAL purchase. Subscription renewals are strictly non-refundable. '
+
+Constraints:
+
+Do not grant refunds for renewals under any circumstances.
+
+Do not invent links, phone numbers, or escalation paths that are not provided in this prompt.
+
+If a request falls outside the policy, politely decline and state the exact policy rule."""),
     )
 
 st.divider()
